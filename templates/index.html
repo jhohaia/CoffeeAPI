@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Coffee Prices</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+        padding: 20px 0;
+      }
+      h2 {
+        color: #666;
+        margin-left: 20px;
+      }
+      p,
+      ul {
+        margin-left: 40px;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      .description-list {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Coffee Prices</h1>
+
+    <h2>Brand:</h2>
+    <p>{{ brand }}</p>
+
+    <h2>Title:</h2>
+    <ul>
+      {% for title in titles %}
+      <li>{{ title }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Description:</h2>
+    <ul class="description-list">
+      {% for description in descriptions %}
+      <li>{{ description }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Price(s):</h2>
+    <ul>
+      {% for price in prices %}
+      <li>{{ price }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
